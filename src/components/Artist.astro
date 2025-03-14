@@ -1,0 +1,18 @@
+---
+const { image, artist, type } = Astro.props;
+---
+<article>
+    <img src={image} alt=""/>
+    <h3>{artist}</h3>
+    <p>{type}</p>
+</article>
+
+<style>
+.music {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px; 
+    align-items: start; 
+    background-color: aliceblue;
+}
+</style>
