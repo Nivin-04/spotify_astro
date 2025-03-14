@@ -1,41 +1,49 @@
 ---
 import Main from '../components/Main.astro';
 import Artist from '../components/Artist.astro';
+import Header from '../components/Header.astro';
+import Sidebar from '../components/Sidebar.astro';
 import Album from '../components/Album.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
+
+	<Header/>
 	<Main />
-	<body>
+
+	<main class="main-container">
+		<Sidebar />
+		<section class="content">
 		<h2>Popular artists</h2>
 	<section class="profile">
 		<Artist image="https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill" artist="Miley Cyrus" type="Artist"/>
 		<Artist image="https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill" artist="Fonzworth Bentley" type="Artist"/>
-		<Artist image="https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill" artist="Miley Cyrus" type="Artist"/>
+		<Artist image="https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill" artist="Rihanna" type="Artist"/>
 		<Artist image="https://via.assets.so/album.png?id=4&q=95&w=360&h=360&fit=fill" artist="Jay-z" type="Artist"/>
 		<Artist image="https://via.assets.so/album.png?id=5&q=95&w=360&h=360&fit=fill" artist="Alan jackson" type="Artist"/>
 		<Artist image="https://via.assets.so/album.png?id=6&q=95&w=360&h=360&fit=fill" artist="Michael Jackson" type="Artist"/>
 		<Artist image="https://via.assets.so/album.png?id=7&q=95&w=360&h=360&fit=fill" artist="Jonas Brothers" type="Artist"/>
 		<Artist image="https://via.assets.so/album.png?id=8&q=95&w=360&h=360&fit=fill" artist="Lil Wayne" type="Artist"/>
 		<Artist image="https://via.assets.so/album.png?id=9&q=95&w=360&h=360&fit=fill" artist="Black Eyed Peas" type="Artist"/>
-		<Artist image="https://via.assets.so/album.png?id=10&q=95&w=360&h=360&fit=fill" artist="Miley Cyrus" type="Artist"/>
+		<Artist image="https://via.assets.so/album.png?id=10&q=95&w=360&h=360&fit=fill" artist="Dierks Bentley" type="Artist"/>
 	</section>
 
 	<h2>Popular songs</h2>
 	<section class="profile">
 		<Album image="https://via.assets.so/album.png?id=1&q=95&w=360&h=360&fit=fill" song="Bangerz" artist="Miley Cyrus"/>
 		<Album image="https://via.assets.so/album.png?id=2&q=95&w=360&h=360&fit=fill" song="Everybody" artist="Fonzworth Bentley"/>
-		<Album image="https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill" song="Miley Cyrus" artist="Singer"/>
+		<Album image="https://via.assets.so/album.png?id=3&q=95&w=360&h=360&fit=fill" song="FourFiveSeconds" artist="Rihanna"/>
 		<Album image="https://via.assets.so/album.png?id=4&q=95&w=360&h=360&fit=fill" song="Swagga Like Us" artist="Jay-z"/>
 		<Album image="https://via.assets.so/album.png?id=5&q=95&w=360&h=360&fit=fill" song="The Greatest Hits Collection" artist="Alan Jackson"/>
 		<Album image="https://via.assets.so/album.png?id=6&q=95&w=360&h=360&fit=fill" song="Billie Jeans" artist="Michael Jackson"/>
 		<Album image="https://via.assets.so/album.png?id=7&q=95&w=360&h=360&fit=fill" song="Jonas Brothers" artist="Singer"/>
 		<Album image="https://via.assets.so/album.png?id=8&q=95&w=360&h=360&fit=fill" song="Rebirth" artist="Lil Wayne"/>
 		<Album image="https://via.assets.so/album.png?id=9&q=95&w=360&h=360&fit=fill" song="Monkey Business" artist="Black Eyed Peas"/>
-		<Album image="https://via.assets.so/album.png?id=10&q=95&w=360&h=360&fit=fill" song="Miley Cyrus" artist="Singer"/>
+		<Album image="https://via.assets.so/album.png?id=10&q=95&w=360&h=360&fit=fill" song="Black" artist="Dierks Bentley"/>
 	</section>
-</body>
+		</section>
+</main>
 </Layout>
 
 <style>
@@ -51,9 +59,25 @@ import Layout from '../layouts/Layout.astro';
     align-items: start;
 	}
 
-    body {
-		background-image: linear-gradient(rgb(33, 24, 39), rgb(81, 44, 80));
-		background-repeat: no-repeat;
-    }
+	.main-container {
+    display: flex;
+    height: 100vh;
+}
+
+.content {
+    flex: 1; /* Expands to fill remaining space */
+    margin-left: 250px; /* Matches sidebar width */
+    padding: 2rem;
+    color: white;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(rgb(33, 24, 39), rgb(81, 44, 80));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 </style>
 

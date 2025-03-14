@@ -1,0 +1,82 @@
+---
+import Logo from '../image/logo.png'; 
+---
+
+
+<section class="header">
+    <img class="logo" src={Logo.src} alt="Logo"/>"
+    <div class="search-container">
+        <input type="text" class="search" placeholder="What do you want to play?">
+    </div>
+    <ul class="nav">
+        <li><a href="#">Premium</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Download</a></li>
+    </ul>
+</section>
+
+<style>
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(19, 2, 32);
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensures the header stays above other content */
+}
+
+
+    li {
+        color: white;
+        list-style: none;
+    }
+
+    .search {
+    flex: 1;
+    max-width: 300px;
+    padding: 1rem;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+}
+
+.search-container {
+    flex: 1; 
+    display: flex;
+    padding-left: 2rem;
+}
+
+.nav {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav li {
+    font-size: 1rem;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: rgb(30, 215, 96);
+}
+
+    img {
+    width: 100%; 
+    max-width: 50px; 
+    height: auto; 
+    border-radius: 50%; 
+    }
+</style>
