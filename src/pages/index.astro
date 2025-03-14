@@ -1,5 +1,4 @@
 ---
-import Main from '../components/Main.astro';
 import Artist from '../components/Artist.astro';
 import Header from '../components/Header.astro';
 import Sidebar from '../components/Sidebar.astro';
@@ -10,7 +9,6 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
 
 	<Header/>
-	<Main />
 
 	<main class="main-container">
 		<Sidebar />
@@ -66,8 +64,8 @@ import Layout from '../layouts/Layout.astro';
 }
 
 .content {
-    flex: 1; /* Expands to fill remaining space */
-    margin-left: 250px; /* Matches sidebar width */
+    flex: 1; 
+    margin-left: 250px; 
     padding: 2rem;
     color: white;
 }
