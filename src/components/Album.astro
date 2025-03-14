@@ -1,15 +1,15 @@
 ---
-const { image, artist, type } = Astro.props;
+const { image, song, artist } = Astro.props;
 ---
 <article>
     <img src={image} alt=""/>
-    <h3>{artist}</h3>
-    <p>{type}</p>
+    <h3>{song}</h3>
+    <p>{artist}</p>
 </article>
 
 <style>
     article {
-    /* background-color: rgb(13, 0, 22); */
+    background-color: rgb(13, 0, 22);
     gap: 2rem;
 	padding: 2rem;
 	margin: 1rem;
@@ -23,11 +23,11 @@ const { image, artist, type } = Astro.props;
     }
     
 
-img {
+    img {
     width: 100%; 
     max-width: 250px; 
     height: auto; 
-    border-radius: 50%; 
+    border-radius: 5px; 
 }
 
 </style>
